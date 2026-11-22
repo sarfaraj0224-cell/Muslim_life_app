@@ -16,7 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.batoulapps.adhan.CalculationMethod
 import com.batoulapps.adhan.Coordinates
-import com.batoulapps.adhan.DateComponents
+import com.batoulapps.adhan.data.DateComponents
 import com.batoulapps.adhan.Madhab
 import com.batoulapps.adhan.PrayerTimes
 import java.text.SimpleDateFormat
