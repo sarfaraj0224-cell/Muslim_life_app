@@ -38,8 +38,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             MuslimLifeApp(
                 savedCount = prefs.getInt("tasbih_count", 0),
-                savedLat = prefs.getString("latitude", "25.86") ?: "25.86",
-                savedLon = prefs.getString("longitude", "85.78") ?: "85.78",
+                savedLat = prefs.getString("latitude", "25.8617") ?: "25.8617",
+                savedLon = prefs.getString("longitude", "85.7784") ?: "85.7784",
                 savedCity = prefs.getString("city", "समस्तीपुर, बिहार") ?: "समस्तीपुर, बिहार",
                 savedManual = prefs.getBoolean("manual_mode", false),
                 savedManualTimes = listOf(
@@ -93,4 +93,4 @@ fun MuslimLifeApp(
     var currentTimeMillis by remember { mutableLongStateOf(System.currentTimeMillis()) }
 
     LaunchedEffect(Unit) {
-        while (true) {
+        repeat(Int.MAX_VALUE) {
