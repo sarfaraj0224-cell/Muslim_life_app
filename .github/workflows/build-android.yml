@@ -1,50 +1,96 @@
 
-name: Build Muslim Life APK
+package com.muslimlife.app
 
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import kotlinx.coroutines.delay
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import com.batoulapps.adhan.CalculationMethod
+import com.batoulapps.adhan.Coordinates
+import com.batoulapps.adhan.data.DateComponents
+import com.batoulapps.adhan.Madhab
+import com.batoulapps.adhan.PrayerTimes
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Date
+import java.util.Locale
+import kotlin.math.atan2
+import kotlin.math.cos
+import kotlin.math.sin
 
-permissions:
-  contents: read
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val prefs = getSharedPreferences("muslim_life", MODE_PRIVATE)
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+        setContent {
+            MuslimLifeApp(
+                savedCount = prefs.getInt("tasbih_count", 0),
+                savedLat = prefs.getString("latitude", "25.8617") ?: "25.8617",
+                savedLon = prefs.getString("longitude", "85.7784") ?: "85.7784",
+                savedCity = prefs.getString("city", "समस्तीपुर, बिहार") ?: "समस्तीपुर, बिहार",
+                savedManual = prefs.getBoolean("manual_mode", false),
+                savedManualTimes = listOf(
+                    prefs.getString("manual_fajr", "") ?: "",
+                    prefs.getString("manual_dhuhr", "") ?: "",
+                    prefs.getString("manual_asr", "") ?: "",
+                    prefs.getString("manual_maghrib", "") ?: "",
+                    prefs.getString("manual_isha", "") ?: ""
+                ),
+                onSaveCount = {
+                    prefs.edit().putInt("tasbih_count", it).apply()
+                },
+                onSaveSettings = { city, lat, lon ->
+                    prefs.edit()
+                        .putString("city", city)
+                        .putString("latitude", lat)
+                        .putString("longitude", lon)
+                        .apply()
+                },
+                onSaveManual = { enabled, times ->
+                    prefs.edit()
+                        .putBoolean("manual_mode", enabled)
+                        .putString("manual_fajr", times[0])
+                        .putString("manual_dhuhr", times[1])
+                        .putString("manual_asr", times[2])
+                        .putString("manual_maghrib", times[3])
+                        .putString("manual_isha", times[4])
+                        .apply()
+                }
+            )
+        }
+    }
+}
 
-    steps:
-      - name: Checkout project
-        uses: actions/checkout@v4
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun MuslimLifeApp(
+    savedCount: Int,
+    savedLat: String,
+    savedLon: String,
+    savedCity: String,
+    savedManual: Boolean,
+    savedManualTimes: List<String>,
+    onSaveCount: (Int) -> Unit,
+    onSaveSettings: (String, String, String) -> Unit,
+    onSaveManual: (Boolean, List<String>) -> Unit
+) {
+    var page by remember { mutableStateOf("Home") }
+    var count by remember { mutableIntStateOf(savedCount) }
+    var goal by remember { mutableIntStateOf(33) }
+    var currentTimeMillis by remember { mutableLongStateOf(System.currentTimeMillis()) }
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: "17"
-
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v4
-        with:
-          packages: "platform-tools"
-
-      - name: Install Android SDK packages
-        run: |
-          sdkmanager --install "platforms;android-35"
-          sdkmanager --install "build-tools;35.0.0"
-
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: "8.9"
-
-      - name: Build Muslim Life APK
-        run: gradle :app:assembleDebug
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: Muslim-Life-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
-          if-no-files-found: error
+    LaunchedEffect(Unit) {
+        repeat(Int.MAX_VALUE) {
