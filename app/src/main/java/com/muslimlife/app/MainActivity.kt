@@ -14,6 +14,9 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.batoulapps.adhan.CalculationMethod
@@ -146,6 +149,7 @@ fun MuslimLifeApp(
         colorScheme = lightColorScheme(primary = Color(0xFF176B50))
     ) {
         Scaffold(
+            containerColor = Color.Transparent,
             topBar = {
                 TopAppBar(
                     title = {
@@ -183,6 +187,13 @@ fun MuslimLifeApp(
                 }
             }
         ) { padding ->
+            Box(Modifier.fillMaxSize()) {
+    Image(
+        painter = painterResource(R.drawable.bg_islamic),
+        contentDescription = "Islamic mosque background",
+        modifier = Modifier.fillMaxSize(),
+        contentScale = ContentScale.Crop
+    )
             Column(
                 Modifier
                     .fillMaxSize()
@@ -446,9 +457,10 @@ fun MuslimLifeApp(
                 }
 
                 Text(
-                    "Muslim Life • प्रारंभिक संस्करण",
+                 "Muslim Life • प्रारंभिक संस्करण",
                     style = MaterialTheme.typography.labelSmall
                 )
+            }
             }
         }
     }
