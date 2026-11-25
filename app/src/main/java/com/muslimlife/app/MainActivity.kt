@@ -1,6 +1,6 @@
 
 package com.muslimlife.app
-
+import androidx.compose.foundation.BorderStroke
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -217,7 +217,12 @@ fun MuslimLifeApp(
                             ).format(Date())
                         )
 
-                        Card {
+                        Card(
+    colors = CardDefaults.cardColors(
+        containerColor = Color(0xCC0B3D2E)
+    ),
+    border = BorderStroke(1.dp, Color(0xFFD4AF37))
+) {
                             Column(
                                 Modifier.fillMaxWidth().padding(16.dp)
                             ) {
