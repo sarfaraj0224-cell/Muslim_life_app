@@ -1,746 +1,96 @@
+<!DOCTYPE html>
+<html lang="hi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- SEO FOR GOOGLE - NOOR-E-ZINDAGI -->
+<title>Noor-e-Zindagi - Namaz Time, Quran, Qibla, Tasbeeh, Zakat Calculator | Samastipur</title>
+<meta name="description" content="Noor-e-Zindagi - Samastipur Bihar ka No.1 Muslim App. Live Namaz Time, Azan Alarm, 114 Surah Quran, Qibla Compass, Tasbeeh Counter, Zakat Calculator. Free Download.">
+<meta name="keywords" content="Noor e Zindagi, Noor-e-Zindagi App, Namaz Time Samastipur, Azan Time, Qibla Direction, Quran 114 Surah, Tasbeeh Counter, Zakat Calculator, Muslim App, Islamic App">
+<meta name="author" content="Sarfaraj Alam - Noor-e-Zindagi">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sarfaraj0224-cell.github.io/Noor-E-Zindagi/">
+<meta property="og:title" content="Noor-e-Zindagi - Muslim Life App">
+<meta property="og:description" content="Namaz Time, Quran, Qibla, Tasbeeh, Zakat - Sab ek App me. Free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sarfaraj0224-cell.github.io/Noor-E-Zindagi/">
+<meta property="og:site_name" content="Noor-e-Zindagi">
+<meta name="theme-color" content="#0f5d2f">
+<link rel="manifest" href="manifest.json">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Noor-e-Zindagi","operatingSystem":"Android","applicationCategory":"LifestyleApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"author":{"@type":"Person","name":"Sarfaraj Alam"}}</script>
+<!-- ADMOB - APNA ID YAHAN DALO: ca-app-pub-XXXXXXXXXXXXXXXX -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-app-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+<style>*{box-sizing:border-box}body{margin:0;font-family:Arial;background:#eef2ee;padding-bottom:80px}.wrap{max-width:390px;margin:auto}.head{background:#0f5d2f;color:#fff;padding:16px;text-align:center;border-radius:0 0 20px 20px}.logo{width:58px;height:58px;background:#d4af37;color:#0f5d2f;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:22px;margin:auto;border:3px solid #fff}.head h1{margin:6px 0 2px;color:#d4af37;font-size:24px}.row{display:flex;gap:6px;justify-content:center;margin-top:8px;flex-wrap:wrap}.chip{background:#fff;color:#0f5d2f;border:none;padding:7px 10px;border-radius:20px;font-weight:700;font-size:12px}.chipG{background:#d4af37;color:#000}.card{background:#fff;margin:12px;border-radius:20px;padding:14px;box-shadow:0 4px 14px #0002}.gold{background:linear-gradient(135deg,#d4af37,#f5d76e);text-align:center}.big{font-size:32px;font-weight:900}.pray{display:flex;justify-content:space-between;padding:11px;border-bottom:1px solid #eee}.pray.active{background:#fff8dc;border:2px solid #d4af37;border-radius:10px}.pray b{color:#0f5d2f}.tgl{display:flex;justify-content:space-between;align-items:center;padding:8px 0}.tgl button{padding:7px 12px;border-radius:20px;border:1px solid #0f5d2f;background:#fff;font-size:13px}.tgl button.on{background:#0f5d2f;color:#fff}input{width:100%;padding:10px;margin:5px 0;border:1px solid #ccc;border-radius:10px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.grid2 button{padding:11px;border-radius:12px;border:1px solid #d4af37;background:#fff;font-weight:700}.grid2 button.on{background:#0f5d2f;color:#fff}.btn{width:100%;background:#0f5d2f;color:#fff;border:none;padding:13px;border-radius:30px;margin:6px 0;font-size:15px}.btnG{background:#d4af37;color:#000}.nav{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;max-width:390px;margin:auto;border-top:1px solid #ddd;z-index:10}.nav button{flex:1;padding:12px 2px;border:none;background:#fff;font-size:12px}.nav button.on{color:#0f5d2f;font-weight:900;border-top:3px solid #d4af37}.tab{display:none}.tab.show{display:block}.surah{padding:10px;border-bottom:1px solid #eee;display:flex;justify-content:space-between}.compass{width:150px;height:150px;border:4px solid #d4af37;border-radius:50%;margin:10px auto;display:flex;align-items:center;justify-content:center;font-size:40px;background:#fff8dc}#toast{position:fixed;top:10px;left:50%;transform:translateX(-50%);background:#000;color:#fff;padding:10px 16px;border-radius:20px;display:none;z-index:99;font-size:14px;text-align:center;max-width:90%}#salam{position:fixed;inset:0;background:#0f5d2fd9;display:flex;align-items:center;justify-content:center;z-index:100}#salam>div{background:#fff;padding:22px;border-radius:20px;text-align:center;width:300px}.modal{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;z-index:101}.modal>div{background:#fff;padding:20px;border-radius:20px;text-align:center;width:320px;max-height:90vh;overflow:auto}.adbox{background:#f1f1f1;border:1px dashed #aaa;text-align:center;padding:10px;font-size:11px;color:#777;margin:12px;border-radius:10px}.donate{border:2px solid #0f5d2f;background:#f0fdf4}.premBadge{background:#d4af37;color:#000;padding:3px 10px;border-radius:20px;font-size:12px;font-weight:800;display:inline-block}</style></head>
+<body><div id="toast"></div>
+<div id="salam"><div><div style="font-size:36px">☪️</div><div style="font-size:32px">السلام عليكم</div><h2>Noor-e-Zindagi</h2><p>Assalamualaikum - Welcome</p></div></div>
+<div class="modal" id="alarmModal"><div><h2>🔔 Azan / Jamaat Time!</h2><p id="alarmTxt">Namaz ka waqt ho gaya</p><button class="btn" onclick="stopAlarm()">Stop</button><button class="btn btnG" onclick="snooze()">Snooze 5 Min</button></div></div>
+<div class="modal" id="premModal"><div><h2>👑 Noor-e-Zindagi Premium</h2><p><b>Lifetime - Sirf ₹99</b></p><p style="text-align:left">✅ No Ads - Bilkul Ad Nahi<br>✅ Offline Quran Audio<br>✅ Extra Duaein & Azkar<br>✅ Priority Support<br>✅ Sadqa-e-Jariya me hissa</p><button class="btn" onclick="buyPremium()">Buy Premium ₹99 - UPI / Play</button><button class="btn btnG" onclick="closePrem()">Baad Me</button></div></div>
+<div class="modal" id="adModal"><div><h3>📢 Ad Break</h3><p>Supporting Noor-e-Zindagi (Halal Ad)</p><div style="background:#eee;padding:20px;border-radius:10px">AdMob Interstitial Ad<br><small>Halal Filtered - Gambling/Alcohol Blocked</small></div><p id="adCount">Close in 3s...</p><button class="btn" id="adCloseBtn" disabled onclick="closeAd()">Close Ad</button></div></div>
 
-package com.muslimlife.app
+<div class="wrap">
+<div class="head"><div class="logo">786</div><h1>☪️ Noor-e-Zindagi</h1><div id="premBadgeBox"></div><p>📍 Samastipur, Bihar</p><p id="coord">25.8617, 85.7784</p><div class="row"><button class="chip" onclick="showTab('home')">🌐 Language</button><button class="chip" onclick="detectLoc()">📍 Location</button><button class="chip" onclick="playSalam()">🔊 Salam</button><button class="chip chipG" onclick="openPrem()">⭐ Premium ₹99</button></div></div>
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
-import kotlinx.coroutines.delay
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import com.batoulapps.adhan.CalculationMethod
-import com.batoulapps.adhan.Coordinates
-import com.batoulapps.adhan.data.DateComponents
-import com.batoulapps.adhan.Madhab
-import com.batoulapps.adhan.PrayerTimes
-import java.text.SimpleDateFormat
-import java.util.Calendar
-import java.util.Date
-import java.util.Locale
-import kotlin.math.atan2
-import kotlin.math.cos
-import kotlin.math.sin
+<div id="tab-home" class="tab show">
+<div class="card gold"><h2>⏳ <span id="nextName">Fajr</span></h2><div class="big" id="count">00:00:00</div><p id="nextInfo">Agli Namaz ka countdown</p><p id="todayDate"></p></div>
+<div class="card"><h3>⚙️ Azan / Jamaat Setting</h3>
+<div class="tgl">Azan Time <span><button id="azanAutoBtn" class="on" onclick="setMode('azan','auto')">Auto</button> <button id="azanManBtn" onclick="setMode('azan','manual')">Manual</button></span></div>
+<div class="tgl">Jamaat Time <span><button id="jamAutoBtn" class="on" onclick="setMode('jamaat','auto')">Auto</button> <button id="jamManBtn" onclick="setMode('jamaat','manual')">Manual</button></span></div>
+<div class="tgl">Greeting <span><button id="greetOn" class="on" onclick="setGreet(true)">On</button> <button id="greetOff" onclick="setGreet(false)">Off</button></span></div>
+<div class="tgl">Azan Alarm <span><button id="alAzanOn" onclick="setAlarm('azan',true)">On</button> <button id="alAzanOff" class="on" onclick="setAlarm('azan',false)">Off</button></span></div>
+<div class="tgl">Jamaat Alarm <span><button id="alJamOn" onclick="setAlarm('jamaat',true)">On</button> <button id="alJamOff" class="on" onclick="setAlarm('jamaat',false)">Off</button></span></div>
+<div id="manualBox" style="display:none"><p><b>Manual Azan Times</b></p>Fajr <input type="time" id="mFajr" value="05:08"> Sunrise <input type="time" id="mSun" value="06:28"> Dhuhr <input type="time" id="mDhuhr" value="11:53"> Asr <input type="time" id="mAsr" value="15:08"> Maghrib <input type="time" id="mMag" value="17:03"> Isha <input type="time" id="mIsha" value="18:28"><p><b>Manual Jamaat</b></p>Fajr Jamaat <input type="time" id="jFajr" value="05:28"> Dhuhr <input type="time" id="jDhuhr" value="12:08"> Asr <input type="time" id="jAsr" value="15:23"> Maghrib <input type="time" id="jMag" value="17:08"> Isha <input type="time" id="jIsha" value="18:38"><p><b>Tahajjud Manual</b></p>Start <input type="time" id="tStart" value="01:25"> End <input type="time" id="tEnd" value="05:08"><button class="btn" onclick="saveManual()">Manual Save Karo</button></div>
+<button class="btn btnG" onclick="setMode('azan','auto');setMode('jamaat','auto')">Wapas Auto Karo</button></div>
+<div class="card"><h3>🌐 Language - 4 Bhasa</h3><div class="grid2"><button onclick="setLang('en',1)" id="l-en">English</button><button onclick="setLang('hi',1)" id="l-hi">Hindi</button><button onclick="setLang('ur',1)" id="l-ur">Urdu</button><button onclick="setLang('ar',1)" id="l-ar">Arabic</button></div><p>📍 Location</p>Lat <input id="latIn" value="25.8617"> Lng <input id="lngIn" value="85.7784"><label><input type="checkbox" id="autoUp" checked> Auto Update</label><button class="btn" onclick="saveLoc()">Location Save</button><button class="btn btnG" onclick="detectLoc()">Auto Detect GPS</button></div>
+<div class="card"><h3>🕌 Aaj Ka Namaz Time</h3><div id="prayList"></div></div>
+<div class="card donate"><h3>🤲 Is App ki Madad Karein</h3><p style="font-size:13px">Aapki madad se App free rahega, InshaAllah - Sadqa-e-Jariya</p><div class="grid2"><button onclick="donate(10)">₹10 Deo</button><button onclick="donate(50)">₹50 Deo</button><button onclick="donate(100)">₹100 Deo</button><button onclick="donate(500)">₹500 Deo</button></div><input id="customAmt" type="number" placeholder="Apni marzi ka amount"><button class="btn btnG" onclick="donate(document.getElementById('customAmt').value||10)">UPI se Donate Karo</button><p style="text-align:center;font-size:11px">UPI ID: sarfaraj0224@upi - Apna UPI yahan badlo</p></div>
+</div>
 
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val prefs = getSharedPreferences("muslim_life", MODE_PRIVATE)
-
-        setContent {
-            MuslimLifeApp(
-                savedCount = prefs.getInt("tasbih_count", 0),
-                savedLat = prefs.getString("latitude", "25.8617") ?: "25.8617",
-                savedLon = prefs.getString("longitude", "85.7784") ?: "85.7784",
-                savedCity = prefs.getString("city", "समस्तीपुर, बिहार") ?: "समस्तीपुर, बिहार",
-                savedManual = prefs.getBoolean("manual_mode", false),
-                savedManualTimes = listOf(
-                    prefs.getString("manual_fajr", "") ?: "",
-                    prefs.getString("manual_dhuhr", "") ?: "",
-                    prefs.getString("manual_asr", "") ?: "",
-                    prefs.getString("manual_maghrib", "") ?: "",
-                    prefs.getString("manual_isha", "") ?: ""
-                ),
-                onSaveCount = {
-                    prefs.edit().putInt("tasbih_count", it).apply()
-                },
-                onSaveSettings = { city, lat, lon ->
-                    prefs.edit()
-                        .putString("city", city)
-                        .putString("latitude", lat)
-                        .putString("longitude", lon)
-                        .apply()
-                },
-                onSaveManual = { enabled, times ->
-                    prefs.edit()
-                        .putBoolean("manual_mode", enabled)
-                        .putString("manual_fajr", times[0])
-                        .putString("manual_dhuhr", times[1])
-                        .putString("manual_asr", times[2])
-                        .putString("manual_maghrib", times[3])
-                        .putString("manual_isha", times[4])
-                        .apply()
-                }
-            )
-        }
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun MuslimLifeApp(
-    savedCount: Int,
-    savedLat: String,
-    savedLon: String,
-    savedCity: String,
-    savedManual: Boolean,
-    savedManualTimes: List<String>,
-    onSaveCount: (Int) -> Unit,
-    onSaveSettings: (String, String, String) -> Unit,
-    onSaveManual: (Boolean, List<String>) -> Unit
-) {
-    var page by remember { mutableStateOf("Home") }
-    var count by remember { mutableIntStateOf(savedCount) }
-    var goal by remember { mutableIntStateOf(33) }
-    var currentTimeMillis by remember { mutableLongStateOf(System.currentTimeMillis()) }
-
-    LaunchedEffect(Unit) {
-        repeat(Int.MAX_VALUE) {
-            delay(1000)
-            currentTimeMillis = System.currentTimeMillis()
-        }
-    }
-
-    var city by remember { mutableStateOf(savedCity) }
-    var latText by remember { mutableStateOf(savedLat) }
-    var lonText by remember { mutableStateOf(savedLon) }
-
-    var method by remember { mutableStateOf("MUSLIM_WORLD_LEAGUE") }
-    var madhab by remember { mutableStateOf("HANAFI") }
-
-    var manual by remember { mutableStateOf(savedManual) }
-    var manualFajr by remember { mutableStateOf(savedManualTimes.getOrElse(0) { "" }) }
-    var manualDhuhr by remember { mutableStateOf(savedManualTimes.getOrElse(1) { "" }) }
-    var manualAsr by remember { mutableStateOf(savedManualTimes.getOrElse(2) { "" }) }
-    var manualMaghrib by remember { mutableStateOf(savedManualTimes.getOrElse(3) { "" }) }
-    var manualIsha by remember { mutableStateOf(savedManualTimes.getOrElse(4) { "" }) }
-
-    val lat = latText.toDoubleOrNull()
-    val lon = lonText.toDoubleOrNull()
-
-    val validLocation = lat != null && lon != null &&
-        lat in -90.0..90.0 && lon in -180.0..180.0
-
-    val automaticTimes = remember(lat, lon, method, madhab) {
-        if (validLocation) calculatePrayerRows(lat!!, lon!!, method, madhab)
-        else emptyList()
-    }
-
-    val prayerRows = if (manual) {
-        listOf(
-            "फ़ज्र" to manualFajr,
-            "ज़ुहर" to manualDhuhr,
-            "अस्र" to manualAsr,
-            "मग़रिब" to manualMaghrib,
-            "ईशा" to manualIsha
-        )
-    } else automaticTimes
-
-    val ishraq = if (!manual && validLocation) {
-        automaticTimes.find { it.first == "सूर्योदय" }?.second
-            ?.let { addMinutes(it, 15) } ?: "—"
-    } else "ऑटो समय उपलब्ध होने पर"
-
-    val tahajjud = if (!manual && validLocation) {
-        calculateTahajjud(lat!!, lon!!, method, madhab)
-    } else "—"
-
-    val nextPrayer = if (manual) {
-        nextPrayerFromManual(prayerRows)
-    } else {
-        nextPrayerFromRows(prayerRows)
-    }
-
-    val countdownTarget = nextPrayerTarget(prayerRows, currentTimeMillis)
-    val countdownText = countdownTarget?.let { target ->
-        formatCountdown((target.second - currentTimeMillis).coerceAtLeast(0L))
-    } ?: "--:--:--"
-
-    val qibla = if (validLocation) qiblaBearing(lat!!, lon!!) else null
-
-    MaterialTheme(
-        colorScheme = lightColorScheme(primary = Color(0xFF176B50))
-    ) {
-        Scaffold(
-            topBar = {
-                TopAppBar(
-                    title = {
-                        Column {
-                            Text("Muslim Life", fontWeight = FontWeight.Bold)
-                            Text(
-                                "आपकी इबादत का साथी",
-                                style = MaterialTheme.typography.labelSmall
-                            )
-                        }
-                    }
-                )
-            },
-            bottomBar = {
-                NavigationBar {
-                    listOf("Home", "Quran", "Tasbih", "Ramadan", "More").forEach { item ->
-                        NavigationBarItem(
-                            selected = page == item,
-                            onClick = { page = item },
-                            icon = {
-                                Icon(
-                                    when (item) {
-                                        "Home" -> Icons.Default.Home
-                                        "Quran" -> Icons.Default.MenuBook
-                                        "Tasbih" -> Icons.Default.Fingerprint
-                                        "Ramadan" -> Icons.Default.NightsStay
-                                        else -> Icons.Default.Explore
-                                    },
-                                    contentDescription = item
-                                )
-                            },
-                            label = { Text(item) }
-                        )
-                    }
-                }
-            }
-        ) { padding ->
-            Column(
-                Modifier
-                    .fillMaxSize()
-                    .padding(padding)
-                    .verticalScroll(rememberScrollState())
-                    .padding(16.dp),
-                verticalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                when (page) {
-                    "Home" -> {
-                        Text(
-                            "अस्सलामु अलैकुम",
-                            style = MaterialTheme.typography.headlineSmall,
-                            fontWeight = FontWeight.Bold
-                        )
-                        Text(city)
-                        Text(
-                            SimpleDateFormat(
-                                "EEEE, dd MMMM yyyy",
-                                Locale.getDefault()
-                            ).format(Date())
-                        )
-
-                        Card(
-                            colors = CardDefaults.cardColors(
-                                containerColor = Color(0xFF0F5D2F)
-                            )
-                        ) {
-                            Column(
-                                Modifier.fillMaxWidth().padding(18.dp),
-                                horizontalAlignment = Alignment.CenterHorizontally
-                            ) {
-                                Text(
-                                    "अगली नमाज़: $nextPrayer",
-                                    color = Color.White,
-                                    style = MaterialTheme.typography.titleMedium,
-                                    fontWeight = FontWeight.Bold
-                                )
-                                Spacer(Modifier.height(8.dp))
-                                Text(
-                                    countdownText,
-                                    color = Color(0xFFD4AF37),
-                                    style = MaterialTheme.typography.headlineLarge,
-                                    fontWeight = FontWeight.Bold
-                                )
-                                Text(
-                                    "बाकी समय (घंटे : मिनट : सेकंड)",
-                                    color = Color.White,
-                                    style = MaterialTheme.typography.bodySmall
-                                )
-                            }
-                        }
-
-                        Card {
-                            Column(
-                                Modifier.fillMaxWidth().padding(16.dp)
-                            ) {
-                                Text(
-                                    "नमाज़ के समय",
-                                    style = MaterialTheme.typography.titleLarge,
-                                    fontWeight = FontWeight.Bold
-                                )
-                                Text("स्थान: $city")
-
-                                if (prayerRows.isEmpty()) {
-                                    Text("समय निकालने के लिए More में स्थान जाँचें।")
-                                } else {
-                                    prayerRows.forEach {
-                                        PrayerRow(it.first, it.second.ifBlank { "सेट करें" })
-                                    }
-                                }
-
-                                HorizontalDivider()
-                                Text(
-                                    "अगली नमाज़: $nextPrayer",
-                                    fontWeight = FontWeight.Bold
-                                )
-                                Text(
-                                    if (manual) "मैनुअल समय चालू है।"
-                                    else "ऑटोमैटिक समय • स्थानीय मस्जिद के कैलेंडर से मिलान करें।",
-                                    style = MaterialTheme.typography.bodySmall
-                                )
-                            }
-                        }
-
-                        InfoCard(
-                            "इशराक",
-                            "अनुमानित समय: $ishraq\nसूर्योदय के बाद मकरूह समय समाप्त होने पर पढ़ें। स्थानीय समय की पुष्टि करें।"
-                        )
-
-                        InfoCard(
-                            "तहज्जुद",
-                            "आख़िरी एक-तिहाई रात की शुरुआत का अनुमान: $tahajjud\nतहज्जुद ईशा के बाद से फ़ज्र से पहले तक पढ़ी जा सकती है।"
-                        )
-
-                        Button(
-                            onClick = {
-                                val newManual = !manual
-                                manual = newManual
-                                onSaveManual(
-                                    newManual,
-                                    listOf(
-                                        manualFajr, manualDhuhr, manualAsr,
-                                        manualMaghrib, manualIsha
-                                    )
-                                )
-                            },
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Text(
-                                if (manual) "ऑटोमैटिक गणना पर लौटें"
-                                else "मैनुअल नमाज़ समय दर्ज करें"
-                            )
-                        }
-
-                        if (manual) {
-                            TimeField("फ़ज्र", manualFajr) { manualFajr = it }
-                            TimeField("ज़ुहर", manualDhuhr) { manualDhuhr = it }
-                            TimeField("अस्र", manualAsr) { manualAsr = it }
-                            TimeField("मग़रिब", manualMaghrib) { manualMaghrib = it }
-                            TimeField("ईशा", manualIsha) { manualIsha = it }
-
-                            Button(
-                                onClick = {
-                                    onSaveManual(
-                                        true,
-                                        listOf(
-                                            manualFajr, manualDhuhr, manualAsr,
-                                            manualMaghrib, manualIsha
-                                        )
-                                    )
-                                },
-                                modifier = Modifier.fillMaxWidth()
-                            ) {
-                                Text("मैनुअल समय सेव करें")
-                            }
-                        }
-                    }
-
-                    "Quran" -> {
-                        Text(
-                            "कुरआन शरीफ",
-                            style = MaterialTheme.typography.headlineSmall,
-                            fontWeight = FontWeight.Bold
-                        )
-                        InfoCard(
-                            "कुरआन लाइब्रेरी",
-                            "पूरा कुरआन और हिंदी/उर्दू अनुवाद अभी इस ऐप में शामिल नहीं हैं। प्रमाणित पाठ और अनुमति-प्राप्त अनुवाद जोड़ना बाकी है।"
-                        )
-                    }
-
-                    "Tasbih" -> {
-                        Text(
-                            "डिजिटल तस्बीह",
-                            style = MaterialTheme.typography.headlineSmall,
-                            fontWeight = FontWeight.Bold
-                        )
-                        Card {
-                            Column(
-                                Modifier.fillMaxWidth().padding(20.dp),
-                                horizontalAlignment = Alignment.CenterHorizontally
-                            ) {
-                                Text(
-                                    "$count",
-                                    style = MaterialTheme.typography.displayLarge,
-                                    fontWeight = FontWeight.Bold
-                                )
-                                Text("लक्ष्य: $goal")
-                                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                    listOf(33, 99, 100).forEach { n ->
-                                        OutlinedButton(onClick = { goal = n }) {
-                                            Text("$n")
-                                        }
-                                    }
-                                }
-                                Button(
-                                    onClick = {
-                                        count++
-                                        onSaveCount(count)
-                                    },
-                                    modifier = Modifier.fillMaxWidth()
-                                ) {
-                                    Text("तस्बीह गिनें")
-                                }
-                                OutlinedButton(
-                                    onClick = {
-                                        count = 0
-                                        onSaveCount(0)
-                                    },
-                                    modifier = Modifier.fillMaxWidth()
-                                ) {
-                                    Text("रीसेट")
-                                }
-                                if (count >= goal) {
-                                    Text(
-                                        "माशाअल्लाह! आपका लक्ष्य पूरा हुआ।",
-                                        color = Color(0xFF176B50),
-                                        fontWeight = FontWeight.Bold
-                                    )
-                                }
-                            }
-                        }
-                        InfoCard(
-                            "ज़िक्र",
-                            "سُبْحَانَ اللّٰهِ — सुब्हानअल्लाह\n" +
-                                "الْحَمْدُ لِلّٰهِ — अल्हम्दुलिल्लाह\n" +
-                                "اللّٰهُ أَكْبَرُ — अल्लाहु अकबर"
-                        )
-                    }
-
-                    "Ramadan" -> {
-                        Text(
-                            "रमज़ान मुबारक",
-                            style = MaterialTheme.typography.headlineSmall,
-                            fontWeight = FontWeight.Bold
-                        )
-                        InfoCard(
-                            "सेहरी और इफ्तार",
-                            "सेहरी का आख़िरी समय फ़ज्र से पहले और इफ्तार का समय मग़रिब पर होता है। स्थानीय मस्जिद के समय से पुष्टि करें।"
-                        )
-                        InfoCard(
-                            "रोज़े की नीयत",
-                            "नीयत दिल के इरादे का नाम है। अलग अरबी वाक्य पढ़ना अनिवार्य नहीं।"
-                        )
-                        InfoCard(
-                            "इफ्तार की दुआ",
-                            "ذَهَبَ الظَّمَأُ وَابْتَلَّتِ الْعُرُوقُ وَثَبَتَ الْأَجْرُ إِنْ شَاءَ اللّٰهُ"
-                        )
-                    }
-
-                    else -> {
-                        Text(
-                            "सेटिंग और अन्य सुविधाएँ",
-                            style = MaterialTheme.typography.headlineSmall,
-                            fontWeight = FontWeight.Bold
-                        )
-                        OutlinedTextField(
-                            city,
-                            { city = it },
-                            label = { Text("शहर का नाम") },
-                            modifier = Modifier.fillMaxWidth()
-                        )
-                        OutlinedTextField(
-                            latText,
-                            { latText = it },
-                            label = { Text("Latitude / अक्षांश") },
-                            modifier = Modifier.fillMaxWidth()
-                        )
-                        OutlinedTextField(
-                            lonText,
-                            { lonText = it },
-                            label = { Text("Longitude / देशांतर") },
-                            modifier = Modifier.fillMaxWidth()
-                        )
-
-                        Text("Calculation method")
-                        DropdownChoice(
-                            method,
-                            listOf(
-                                "MUSLIM_WORLD_LEAGUE", "EGYPTIAN", "KARACHI",
-                                "UMM_AL_QURA", "DUBAI", "QATAR", "KUWAIT",
-                                "SINGAPORE", "NORTH_AMERICA"
-                            )
-                        ) { method = it }
-
-                        Text("Asr method")
-                        DropdownChoice(
-                            madhab,
-                            listOf("HANAFI", "SHAFI")
-                        ) { madhab = it }
-
-                        Button(
-                            onClick = {
-                                onSaveSettings(city, latText, lonText)
-                            },
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Text("स्थान सेव करें")
-                        }
-
-                        InfoCard(
-                            "क़िबला दिशा",
-                            qibla?.let {
-                                "काबा की दिशा: ${"%.1f".format(it)}° उत्तर से clockwise"
-                            } ?: "सही coordinates दर्ज करें।"
-                        )
-                        InfoCard(
-                            "भाषा",
-                            "हिंदी • اردو • العربية • English — अन्य भाषाओं का पूरा अनुवाद अभी जोड़ना बाकी है।"
-                        )
-                    }
-                }
-
-                Text(
-                    "Muslim Life • प्रारंभिक संस्करण",
-                    style = MaterialTheme.typography.labelSmall
-                )
-            }
-        }
-    }
-}
-
-fun calculatePrayerRows(
-    lat: Double,
-    lon: Double,
-    method: String,
-    madhab: String
-): List<Pair<String, String>> {
-    return try {
-        val coordinates = Coordinates(lat, lon)
-        val date = DateComponents.from(Date())
-
-        val params = when (method) {
-            "EGYPTIAN" -> CalculationMethod.EGYPTIAN.parameters
-            "KARACHI" -> CalculationMethod.KARACHI.parameters
-            "UMM_AL_QURA" -> CalculationMethod.UMM_AL_QURA.parameters
-            "DUBAI" -> CalculationMethod.DUBAI.parameters
-            "QATAR" -> CalculationMethod.QATAR.parameters
-            "KUWAIT" -> CalculationMethod.KUWAIT.parameters
-            "SINGAPORE" -> CalculationMethod.SINGAPORE.parameters
-            "NORTH_AMERICA" -> CalculationMethod.NORTH_AMERICA.parameters
-            else -> CalculationMethod.MUSLIM_WORLD_LEAGUE.parameters
-        }
-
-        params.madhab =
-            if (madhab == "HANAFI") Madhab.HANAFI else Madhab.SHAFI
-
-        val times = PrayerTimes(coordinates, date, params)
-        val fmt = SimpleDateFormat("hh:mm a", Locale.getDefault())
-
-        listOf(
-            "फ़ज्र" to fmt.format(times.fajr),
-            "सूर्योदय" to fmt.format(times.sunrise),
-            "ज़ुहर" to fmt.format(times.dhuhr),
-            "अस्र" to fmt.format(times.asr),
-            "मग़रिब" to fmt.format(times.maghrib),
-            "ईशा" to fmt.format(times.isha)
-        )
-    } catch (_: Exception) {
-        listOf("समय गणना" to "जाँच आवश्यक")
-    }
-}
-
-fun addMinutes(time: String, minutes: Int): String {
-    return try {
-        val input = SimpleDateFormat("hh:mm a", Locale.getDefault())
-        val date = input.parse(time) ?: return "—"
-        val calendar = Calendar.getInstance()
-        calendar.time = date
-        calendar.add(Calendar.MINUTE, minutes)
-        input.format(calendar.time)
-    } catch (_: Exception) {
-        "—"
-    }
-}
-
-fun calculateTahajjud(
-    lat: Double,
-    lon: Double,
-    method: String,
-    madhab: String
-): String {
-    return try {
-        val coordinates = Coordinates(lat, lon)
-        val today = Calendar.getInstance()
-        val todayDate = DateComponents.from(today.time)
-
-        val params = when (method) {
-            "EGYPTIAN" -> CalculationMethod.EGYPTIAN.parameters
-            "KARACHI" -> CalculationMethod.KARACHI.parameters
-            "UMM_AL_QURA" -> CalculationMethod.UMM_AL_QURA.parameters
-            "DUBAI" -> CalculationMethod.DUBAI.parameters
-            "QATAR" -> CalculationMethod.QATAR.parameters
-            "KUWAIT" -> CalculationMethod.KUWAIT.parameters
-            "SINGAPORE" -> CalculationMethod.SINGAPORE.parameters
-            "NORTH_AMERICA" -> CalculationMethod.NORTH_AMERICA.parameters
-            else -> CalculationMethod.MUSLIM_WORLD_LEAGUE.parameters
-        }
-        params.madhab =
-            if (madhab == "HANAFI") Madhab.HANAFI else Madhab.SHAFI
-
-        val tonight = PrayerTimes(coordinates, todayDate, params)
-        val tomorrow = Calendar.getInstance().apply {
-            add(Calendar.DAY_OF_YEAR, 1)
-        }
-        val tomorrowTimes = PrayerTimes(
-            coordinates,
-            DateComponents.from(tomorrow.time),
-            params
-        )
-
-        val nightStart = tonight.maghrib.time
-        val nightEnd = tomorrowTimes.fajr.time
-        val duration = nightEnd - nightStart
-        val lastThirdStart = nightStart + (duration * 2L / 3L)
-
-        SimpleDateFormat("hh:mm a", Locale.getDefault())
-            .format(Date(lastThirdStart))
-    } catch (_: Exception) {
-        "—"
-    }
-}
-
-fun nextPrayerFromRows(rows: List<Pair<String, String>>): String {
-    if (rows.isEmpty()) return "समय उपलब्ध नहीं"
-    val names = listOf("फ़ज्र", "ज़ुहर", "अस्र", "मग़रिब", "ईशा")
-    val now = Calendar.getInstance()
-    val currentMinutes = now.get(Calendar.HOUR_OF_DAY) * 60 +
-        now.get(Calendar.MINUTE)
-
-    val upcoming = rows.filter { it.first in names }.mapNotNull { row ->
-        val minutes = parseTimeMinutes(row.second) ?: return@mapNotNull null
-        Triple(row.first, minutes, minutes - currentMinutes)
-    }.filter { it.third > 0 }.minByOrNull { it.third }
-
-    return upcoming?.first ?: "कल की फ़ज्र"
-}
-
-fun nextPrayerFromManual(rows: List<Pair<String, String>>): String =
-    nextPrayerFromRows(rows)
-
-fun parseTimeMinutes(value: String): Int? {
-    return try {
-        val format = SimpleDateFormat("hh:mm a", Locale.getDefault())
-        val date = format.parse(value) ?: return null
-        val calendar = Calendar.getInstance()
-        calendar.time = date
-        calendar.get(Calendar.HOUR_OF_DAY) * 60 +
-            calendar.get(Calendar.MINUTE)
-    } catch (_: Exception) {
-        null
-    }
-}
-
-fun nextPrayerTarget(
-    rows: List<Pair<String, String>>,
-    nowMillis: Long
-): Pair<String, Long>? {
-    val prayerNames = listOf("फ़ज्र", "ज़ुहर", "अस्र", "मग़रिब", "ईशा")
-    val now = Calendar.getInstance().apply { timeInMillis = nowMillis }
-    val candidates = rows.filter { it.first in prayerNames }.mapNotNull { row ->
-        try {
-            val parsed = SimpleDateFormat("hh:mm a", Locale.getDefault()).parse(row.second)
-                ?: return@mapNotNull null
-            val time = Calendar.getInstance().apply {
-                set(Calendar.HOUR_OF_DAY, parsed.hours)
-                set(Calendar.MINUTE, parsed.minutes)
-                set(Calendar.SECOND, 0)
-                set(Calendar.MILLISECOND, 0)
-                if (timeInMillis <= nowMillis) add(Calendar.DAY_OF_YEAR, 1)
-            }.timeInMillis
-            row.first to time
-        } catch (_: Exception) {
-            null
-        }
-    }
-    return candidates.minByOrNull { it.second }
-}
-
-fun formatCountdown(remainingMillis: Long): String {
-    val totalSeconds = remainingMillis / 1000L
-    val hours = totalSeconds / 3600L
-    val minutes = (totalSeconds % 3600L) / 60L
-    val seconds = totalSeconds % 60L
-    return String.format(Locale.getDefault(), "%02d:%02d:%02d", hours, minutes, seconds)
-}
-
-fun qiblaBearing(latitude: Double, longitude: Double): Double {
-    val kaabaLat = Math.toRadians(21.4225)
-    val kaabaLon = Math.toRadians(39.8262)
-    val lat = Math.toRadians(latitude)
-    val lon = Math.toRadians(longitude)
-    val dLon = kaabaLon - lon
-    val y = sin(dLon)
-    val x = cos(lat) * kotlin.math.tan(kaabaLat) -
-        sin(lat) * cos(dLon)
-    return (Math.toDegrees(atan2(y, x)) + 360.0) % 360.0
-}
-
-@Composable
-fun DropdownChoice(
-    value: String,
-    choices: List<String>,
-    onChange: (String) -> Unit
-) {
-    var expanded by remember { mutableStateOf(false) }
-    Box {
-        OutlinedButton(onClick = { expanded = true }) {
-            Text(value.replace('_', ' '))
-        }
-        DropdownMenu(
-            expanded = expanded,
-            onDismissRequest = { expanded = false }
-        ) {
-            choices.forEach { choice ->
-                DropdownMenuItem(
-                    text = { Text(choice.replace('_', ' ')) },
-                    onClick = {
-                        onChange(choice)
-                        expanded = false
-                    }
-                )
-            }
-        }
-    }
-}
-
-@Composable
-fun PrayerRow(name: String, time: String) {
-    Row(
-        Modifier.fillMaxWidth().padding(vertical = 4.dp),
-        horizontalArrangement = Arrangement.SpaceBetween
-    ) {
-        Text(name)
-        Text(time, fontWeight = FontWeight.SemiBold)
-    }
-}
-
-@Composable
-fun TimeField(
-    label: String,
-    value: String,
-    onChange: (String) -> Unit
-) {
-    OutlinedTextField(
-        value,
-        onChange,
-        label = { Text("$label (hh:mm AM/PM)") },
-        modifier = Modifier.fillMaxWidth(),
-        singleLine = true
-    )
-}
-
-@Composable
-fun InfoCard(title: String, body: String) {
-    Card {
-        Column(Modifier.fillMaxWidth().padding(16.dp)) {
-            Text(
-                title,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold
-            )
-            Spacer(Modifier.height(6.dp))
-            Text(body)
-        }
-    }
-}
+<div id="tab-quran" class="tab"><div class="card"><h3>📖 Quran - 114 Surah</h3><input id="qSearch" placeholder="Surah search..." oninput="renderQuran()"><div id="qList"></div></div><div class="adbox" id="ad-quran">AdMob Banner - Halal Ad (320x50)<br>Ad ID: ca-app-pub-XXXXXXXX</div></div>
+<div id="tab-qibla" class="tab"><div class="card"><h3>🧭 Qibla Compass</h3><div class="compass" id="compass">🕋</div><p style="text-align:center">Bearing: <b id="qBear">--</b>° | Distance: <b id="qDist">--</b> km</p><p style="text-align:center" id="qDir">Qibla direction...</p><button class="btn" onclick="calcQibla()">Qibla Calculate Karo</button></div><div class="adbox" id="ad-qibla">AdMob Banner - Halal Ad</div></div>
+<div id="tab-tasbeeh" class="tab"><div class="card"><h3>📿 Tasbeeh Counter</h3><div style="text-align:center;font-size:60px;color:#0f5d2f" id="tas">0</div><p style="text-align:center" id="tasTarget">Target: 33</p><button class="btn" onclick="tasCount()">SubhanAllah - Dabao</button><div class="grid2"><button onclick="setTarget(33)">33</button><button onclick="setTarget(99)">99</button><button onclick="setTarget(100)">100</button><button onclick="tasReset()">Reset</button></div></div><div class="adbox" id="ad-tas">AdMob Banner - Halal Ad</div></div>
+<div id="tab-zakat" class="tab"><div class="card"><h3>💰 Zakat Calculator</h3>Cash <input type="number" id="zCash" placeholder="100000"> Gold <input type="number" id="zGold" placeholder="Gold value"> Other <input type="number" id="zOther" placeholder="0"><button class="btn" onclick="calcZakat()">Zakat Nikalo</button><h2 id="zRes" style="text-align:center;color:#0f5d2f"></h2></div><div class="card donate"><h3>🤲 Sadqa-e-Jariya</h3><div class="grid2"><button onclick="donate(10)">₹10</button><button onclick="donate(50)">₹50</button><button onclick="donate(100)">₹100</button><button onclick="donate(500)">₹500</button></div></div><div class="adbox" id="ad-zakat">AdMob Banner - Halal Ad</div></div>
+</div>
+<div class="nav"><button class="on" onclick="showTab('home',this)">🏠 Home</button><button onclick="showTab('quran',this)">📖 Quran</button><button onclick="showTab('qibla',this)">🧭 Qibla</button><button onclick="showTab('tasbeeh',this)">📿 Tasbeeh</button><button onclick="showTab('zakat',this)">💰 Zakat</button></div>
+<script>
+let lang='hi', lat=25.8617, lng=85.7784, azanMode='auto', jamMode='auto', greet=true, alAzan=false, alJam=false, tas=0, target=33, snoozed=0, premium=localStorage.getItem('premium')=='1', clicks=0;
+let azan={Fajr:'05:08',Sunrise:'06:28',Ishraq:'06:43',Chasht:'07:30',Dhuhr:'11:53',Asr:'15:08',Maghrib:'17:03',Isha:'18:28'};
+let jamaat={Fajr:'05:28',Dhuhr:'12:08',Asr:'15:23',Maghrib:'17:08',Isha:'18:38'};
+let tahaj={start:'01:25',end:'05:08'};
+function toast(m){let t=document.getElementById('toast');t.innerText=m;t.style.display='block';setTimeout(()=>t.style.display='none',3000)}
+function speak(txt){try{let u=new SpeechSynthesisUtterance(txt);u.lang=lang=='ar'?'ar-SA':lang=='ur'?'ur-PK':lang=='hi'?'hi-IN':'en-US';speechSynthesis.speak(u)}catch(e){}}
+function playSalam(){speak('Assalamualaikum');toast('Salam - Noor-e-Zindagi')}
+function updatePremiumUI(){if(premium){document.getElementById('premBadgeBox').innerHTML='<span class="premBadge">👑 Premium User</span>';document.querySelectorAll('.adbox').forEach(e=>e.style.display='none')}else{document.getElementById('premBadgeBox').innerHTML='';document.querySelectorAll('.adbox').forEach(e=>e.style.display='block')}}
+function openPrem(){document.getElementById('premModal').style.display='flex'}function closePrem(){document.getElementById('premModal').style.display='none'}
+function buyPremium(){premium=true;localStorage.setItem('premium','1');updatePremiumUI();closePrem();toast('MashaAllah! Premium Active - JazakAllah');speak('MashaAllah')}
+function donate(amt){let upi='upi://pay?pa=sarfaraj0224@upi&pn=Noor-e-Zindagi&am='+amt+'&cu=INR&tn=Sadqa-e-Jariya';window.location.href=upi;toast('JazakAllahu Khairan! Allah aapko jaza de - ₹'+amt)}
+function maybeShowAd(){if(premium)return;clicks++;if(clicks%3==0){document.getElementById('adModal').style.display='flex';let c=3;document.getElementById('adCloseBtn').disabled=true;let iv=setInterval(()=>{c--;document.getElementById('adCount').innerText='Close in '+c+'s...';if(c<=0){clearInterval(iv);document.getElementById('adCloseBtn').disabled=false;document.getElementById('adCount').innerText='Ad khatam - Close dabao'}},1000)}}
+function closeAd(){document.getElementById('adModal').style.display='none'}
+function setGreet(v){greet=v;document.getElementById('greetOn').className=v?'on':'';document.getElementById('greetOff').className=!v?'on':'';localStorage.setItem('greet',v)}
+function setLang(l,man){lang=l;['en','hi','ur','ar'].forEach(x=>document.getElementById('l-'+x).className=x==l?'on':'');localStorage.setItem('lang',l);if(man){toast('Language auto set to '+l);speak('Assalamualaikum')}}
+function setMode(type,m){if(type=='azan'){azanMode=m;document.getElementById('azanAutoBtn').className=m=='auto'?'on':'';document.getElementById('azanManBtn').className=m=='manual'?'on':''}else{jamMode=m;document.getElementById('jamAutoBtn').className=m=='auto'?'on':'';document.getElementById('jamManBtn').className=m=='manual'?'on':''}document.getElementById('manualBox').style.display=(azanMode=='manual'||jamMode=='manual')?'block':'none';localStorage.setItem(type+'Mode',m);if(m=='auto')loadTimes();else renderPray()}
+function saveManual(){azan.Fajr=document.getElementById('mFajr').value;azan.Sunrise=document.getElementById('mSun').value;azan.Dhuhr=document.getElementById('mDhuhr').value;azan.Asr=document.getElementById('mAsr').value;azan.Maghrib=document.getElementById('mMag').value;azan.Isha=document.getElementById('mIsha').value;jamaat.Fajr=document.getElementById('jFajr').value;jamaat.Dhuhr=document.getElementById('jDhuhr').value;jamaat.Asr=document.getElementById('jAsr').value;jamaat.Maghrib=document.getElementById('jMag').value;jamaat.Isha=document.getElementById('jIsha').value;tahaj.start=document.getElementById('tStart').value;tahaj.end=document.getElementById('tEnd').value;localStorage.setItem('azan',JSON.stringify(azan));localStorage.setItem('jamaat',JSON.stringify(jamaat));localStorage.setItem('tahaj',JSON.stringify(tahaj));renderPray();toast('Manual Save Ho Gaya!')}
+function saveLoc(){lat=parseFloat(document.getElementById('latIn').value)||25.8617;lng=parseFloat(document.getElementById('lngIn').value)||85.7784;document.getElementById('coord').innerText=lat+', '+lng;localStorage.setItem('lat',lat);localStorage.setItem('lng',lng);calcQibla();loadTimes();toast('Location Save!')}
+function detectLoc(){if(navigator.geolocation){navigator.geolocation.getCurrentPosition(p=>{lat=p.coords.latitude;lng=p.coords.longitude;document.getElementById('latIn').value=lat;document.getElementById('lngIn').value=lng;saveLoc();toast('GPS Location Mil Gayi!')},()=>toast('GPS nahi mila'))}else toast('GPS support nahi hai')}
+async function loadTimes(){try{let d=new Date().toISOString().split('T')[0];let r=await fetch(https://api.aladhan.com/v1/timings/${d}?latitude=${lat}&longitude=${lng}&method=1);let j=await r.json();let t=j.data.timings;if(azanMode=='auto'){azan={Fajr:t.Fajr.slice(0,5),Sunrise:t.Sunrise.slice(0,5),Ishraq:'06:43',Chasht:'07:30',Dhuhr:t.Dhuhr.slice(0,5),Asr:t.Asr.slice(0,5),Maghrib:t.Maghrib.slice(0,5),Isha:t.Isha.slice(0,5)};let toMin=s=>{let[a,b]=s.split(':');return +a*60+ +b};let fmt=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');if(jamMode=='auto'){jamaat={Fajr:fmt(toMin(azan.Fajr)+20),Dhuhr:fmt(toMin(azan.Dhuhr)+15),Asr:fmt(toMin(azan.Asr)+15),Maghrib:fmt(toMin(azan.Maghrib)+5),Isha:fmt(toMin(azan.Isha)+10)}};tahaj={start:'01:25',end:azan.Fajr}}renderPray()}catch(e){renderPray()}}
+function renderPray(){let list=[['Fajr',azan.Fajr,jamaat.Fajr],['Sunrise',azan.Sunrise,'-'],['Ishraq',azan.Ishraq,'-'],['Chasht',azan.Chasht,'-'],['Dhuhr',azan.Dhuhr,jamaat.Dhuhr],['Asr',azan.Asr,jamaat.Asr],['Maghrib',azan.Maghrib,jamaat.Maghrib],['Isha',azan.Isha,jamaat.Isha],['Tahajjud',tahaj.start+' - '+tahaj.end,'-']];document.getElementById('prayList').innerHTML=list.map(x=><div class="pray" id="row-${x[0]}"><span>🕌 ${x[0]}</span><span>Azan <b>${x[1]}</b> | Jamaat <b>${x[2]}</b></span></div>).join('')}
+function tick(){let now=new Date();let order=['Fajr','Dhuhr','Asr','Maghrib','Isha'];let next=null,diff=1e12;for(let n of order){let[h,m]=azan[n].split(':');let d=new Date();d.setHours(h,m,0,0);let df=d-now;if(df<0)df+=86400000;if(df<diff){diff=df;next=n}}let h=Math.floor(diff/3600000),mi=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);document.getElementById('count').innerText=${String(h).padStart(2,'0')}:${String(mi).padStart(2,'0')}:${String(s).padStart(2,'0')};document.getElementById('nextName').innerText=next;document.getElementById('nextInfo').innerText=Agli Namaz: ${next} - Azan ${azan[next]} | Jamaat ${jamaat[next]||'-'};document.querySelectorAll('.pray').forEach(e=>e.classList.remove('active'));let r=document.getElementById('row-'+next);if(r)r.classList.add('active')}
+setInterval(tick,1000);
+function showTab(t,btn){['home','quran','qibla','tasbeeh','zakat'].forEach(x=>document.getElementById('tab-'+x).classList.remove('show'));document.getElementById('tab-'+t).classList.add('show');document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('on'));if(btn)btn.classList.add('on');maybeShowAd();if(t=='qibla')calcQibla();if(t=='quran')renderQuran()}
+let surahs=['Al-Fatiha','Al-Baqarah','Aal-e-Imran','An-Nisa','Al-Maidah','Al-Anam','Al-Araf','Al-Anfal','At-Tawba','Yunus','Hud','Yusuf','Ar-Rad','Ibrahim','Al-Hijr','An-Nahl','Al-Isra','Al-Kahf','Maryam','Taha','Al-Anbiya','Al-Hajj','Al-Muminun','An-Nur','Al-Furqan','Ash-Shuara','An-Naml','Al-Qasas','Al-Ankabut','Ar-Rum','Luqman','As-Sajda','Al-Ahzab','Saba','Fatir','Ya-Sin','As-Saffat','Sad','Az-Zumar','Ghafir','Fussilat','Ash-Shura','Az-Zukhruf','Ad-Dukhan','Al-Jathiya','Al-Ahqaf','Muhammad','Al-Fath','Al-Hujurat','Qaf','Adh-Dhariyat','At-Tur','An-Najm','Al-Qamar','Ar-Rahman','Al-Waqia','Al-Hadid','Al-Mujadila','Al-Hashr','Al-Mumtahina','As-Saff','Al-Jumua','Al-Munafiqun','At-Taghabun','At-Talaq','At-Tahrim','Al-Mulk','Al-Qalam','Al-Haqqa','Al-Maarij','Nuh','Al-Jinn','Al-Muzzammil','Al-Muddaththir','Al-Qiyama','Al-Insan','Al-Mursalat','An-Naba','An-Naziat','Abasa','At-Takwir','Al-Infitar','Al-Mutaffifin','Al-Inshiqaq','Al-Buruj','At-Tariq','Al-Ala','Al-Ghashiya','Al-Fajr','Al-Balad','Ash-Shams','Al-Lail','Ad-Duha','Ash-Sharh','At-Tin','Al-Alaq','Al-Qadr','Al-Bayyina','Az-Zalzala','Al-Adiyat','Al-Qaria','At-Takathur','Al-Asr','Al-Humaza','Al-Fil','Quraysh','Al-Maun','Al-Kawthar','Al-Kafirun','An-Nasr','Al-Masad','Al-Ikhlas','Al-Falaq','An-Nas'];
+function renderQuran(){let q=(document.getElementById('qSearch').value||'').toLowerCase();document.getElementById('qList').innerHTML=surahs.map((s,i)=><div class="surah"><span>${i+1}. ${s}</span><span>📖</span></div>).filter((_,i)=>surahs[i].toLowerCase().includes(q)).join('')}
+function calcQibla(){let lat1=lat*Math.PI/180,lon1=lng*Math.PI/180,lat2=21.3891*Math.PI/180,lon2=39.8579*Math.PI/180;let dLon=lon2-lon1;let y=Math.sin(dLon)*Math.cos(lat2);let x=Math.cos(lat1)*Math.sin(lat2)-Math.sin(lat1)*Math.cos(lat2)*Math.cos(dLon);let br=(Math.atan2(y,x)*180/Math.PI+360)%360;let R=6371;let dLat=lat2-lat1;let a=Math.sin(dLat/2)**2+Math.cos(lat1)*Math.cos(lat2)*Math.sin(dLon/2)**2;let dist=2*R*Math.asin(Math.sqrt(a));document.getElementById('qBear').innerText=br.toFixed(1);document.getElementById('qDist').innerText=dist.toFixed(0);document.getElementById('qDir').innerText=br>180?'Qibla West me hai':'Qibla North-West me hai';return br}
+function tasCount(){tas++;document.getElementById('tas').innerText=tas;if(navigator.vibrate)navigator.vibrate(20);if(tas>=target){toast('MashaAllah! '+target+' pura!');speak('MashaAllah')}}
+function setTarget(n){target=n;document.getElementById('tasTarget').innerText='Target: '+n;tas=0;document.getElementById('tas').innerText=0}
+function tasReset(){tas=0;document.getElementById('tas').innerText=0}
+function calcZakat(){let tot=(+document.getElementById('zCash').value||0)+(+document.getElementById('zGold').value||0)+(+document.getElementById('zOther').value||0);let z=tot*0.025;document.getElementById('zRes').innerText=tot<50000?'Nisab se kam - Zakat nahi':'Zakat: ₹'+z.toFixed(0)}
+function setAlarm(t,v){if(t=='azan'){alAzan=v;document.getElementById('alAzanOn').className=v?'on':'';document.getElementById('alAzanOff').className=!v?'on':''}else{alJam=v;document.getElementById('alJamOn').className=v?'on':'';document.getElementById('alJamOff').className=!v?'on':''}if(v&&Notification&&Notification.permission!='granted')Notification.requestPermission();localStorage.setItem('al'+t,v)}
+function checkAlarm(){if(snoozed>Date.now())return;let now=new Date();let hm=String(now.getHours()).padStart(2,'0')+':'+String(now.getMinutes()).padStart(2,'0');for(let k in azan){if(azan[k]==hm&&alAzan){showAlarm('Azan Time - '+k)}}for(let k in jamaat){if(jamaat[k]==hm&&alJam){showAlarm('Jamaat Time - '+k)}}}
+function showAlarm(t){document.getElementById('alarmTxt').innerText=t;document.getElementById('alarmModal').style.display='flex';try{let a=new Audio('https://www.soundjay.com/buttons/sounds/beep-01a.mp3');a.play()}catch(e){}if(Notification&&Notification.permission=='granted')new Notification(t)}
+function stopAlarm(){document.getElementById('alarmModal').style.display='none'}
+function snooze(){snoozed=Date.now()+5*60000;stopAlarm();toast('Snooze 5 Min')}
+setInterval(checkAlarm,10000);
+document.getElementById('todayDate').innerText=new Date().toDateString();
+let sl=localStorage.getItem('lang');if(sl)setLang(sl,0);let svLat=localStorage.getItem('lat');if(svLat){lat=+svLat;lng=+localStorage.getItem('lng');document.getElementById('latIn').value=lat;document.getElementById('lngIn').value=lng;document.getElementById('coord').innerText=lat+', '+lng}
+fetch('https://ipapi.co/json/').then(r=>r.json()).then(d=>{let c=(d.country||'IN');let m={IN:'hi',PK:'ur',SA:'ar',AE:'ar',QA:'ar',US:'en',GB:'en'};if(m[c]&&!localStorage.getItem('lang')){setLang(m[c],0);toast('Language auto set to '+m[c])}}).catch(()=>{});
+if(localStorage.getItem('azan')){azan=JSON.parse(localStorage.getItem('azan'));jamaat=JSON.parse(localStorage.getItem('jamaat')||JSON.stringify(jamaat));tahaj=JSON.parse(localStorage.getItem('tahaj')||JSON.stringify(tahaj))}
+loadTimes();renderPray();renderQuran();calcQibla();updatePremiumUI();
+if(greet){setTimeout(()=>{document.getElementById('salam').style.display='none';playSalam()},2000)}else{document.getElementById('salam').style.display='none'}
+document.getElementById('salam').onclick=()=>document.getElementById('salam').style.display='none';
+</script></body></html>
