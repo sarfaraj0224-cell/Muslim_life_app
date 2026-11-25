@@ -152,22 +152,41 @@ fun MuslimLifeApp(
             containerColor = Color.Transparent,
             topBar = {
                 TopAppBar(
+                    colors = TopAppBarDefaults.topAppBarColors(
+    containerColor = Color(0xFF0B3D2E),
+    titleContentColor = Color.White
+),
                     title = {
                         Column {
-                            Text("Muslim Life", fontWeight = FontWeight.Bold)
                             Text(
-                                "आपकी इबादत का साथी",
-                                style = MaterialTheme.typography.labelSmall
-                            )
+    "Noor-e-Zindagi",
+    fontWeight = FontWeight.Bold,
+    color = Color.White
+)
+                          Text(
+    "आपकी इबादत का साथी",
+    style = MaterialTheme.typography.labelSmall,
+    color = Color.White
+)
                         }
                     }
                 )
             },
             bottomBar = {
-                NavigationBar {
+               NavigationBar(
+    containerColor = Color(0xFF0B3D2E),
+    contentColor = Color.White
+) {
                     listOf("Home", "Quran", "Tasbih", "Ramadan", "More").forEach { item ->
                         NavigationBarItem(
                             selected = page == item,
+                            colors = NavigationBarItemDefaults.colors(
+    selectedIconColor = Color(0xFFD4AF37),
+    selectedTextColor = Color(0xFFD4AF37),
+    unselectedIconColor = Color.White,
+    unselectedTextColor = Color.White,
+    indicatorColor = Color(0xFF176B50)
+),
                             onClick = { page = item },
                             icon = {
                                 Icon(
@@ -219,8 +238,9 @@ fun MuslimLifeApp(
 
                         Card(
     colors = CardDefaults.cardColors(
-        containerColor = Color(0xCC0B3D2E)
-    ),
+    containerColor = Color(0xCC0B3D2E),
+    contentColor = Color.White
+),
     border = BorderStroke(1.dp, Color(0xFFD4AF37))
 ) {
                             Column(
