@@ -1,5 +1,12 @@
 
 package com.muslimlife.app
+import android.Manifest
+import android.content.Context
+import android.location.LocationManager
+import android.content.pm.PackageManager
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.compose.foundation.BorderStroke
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -96,7 +103,47 @@ fun MuslimLifeApp(
     var city by remember { mutableStateOf(savedCity) }
     var latText by remember { mutableStateOf(savedLat) }
     var lonText by remember { mutableStateOf(savedLon) }
+    var gpsMessage by remember { mutableStateOf("") }
+    val locationPermissionLauncher =
+    rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { permissions ->
+        val granted =
+            permissions[Manifest.permission.ACCESS_FINE_LOCATION] == true ||
+            permissions[Manifest.permission.ACCESS_COARSE_LOCATION] == true
 
+        if (granted) {
+            gpsMessage = "Location permission मिल गई"
+        } else {
+            gpsMessage = "Location permission नहीं मिली"
+        }
+    }
+    val context = androidx.compose.ui.platform.LocalContext.current
+
+fun getGpsLocation(): Boolean {
+    val locationManager =
+        context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+
+    try {
+        val location =
+            locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
+                ?: locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)
+
+        if (location != null) {
+            latText = location.latitude.toString()
+            lonText = location.longitude.toString()
+            city = "GPS Location"
+            gpsMessage = "आपकी लोकेशन सफलतापूर्वक मिल गई"
+            return true
+        } else {
+            gpsMessage = "Location नहीं मिली। GPS चालू करके दोबारा कोशिश करें।"
+        }
+    } catch (e: SecurityException) {
+        gpsMessage = "Location Permission जरूरी है"
+    }
+
+    return false
+}
     var method by remember { mutableStateOf("MUSLIM_WORLD_LEAGUE") }
     var madhab by remember { mutableStateOf("HANAFI") }
 
