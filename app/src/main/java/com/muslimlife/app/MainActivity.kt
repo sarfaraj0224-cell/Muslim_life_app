@@ -112,11 +112,12 @@ fun MuslimLifeApp(
             permissions[Manifest.permission.ACCESS_FINE_LOCATION] == true ||
             permissions[Manifest.permission.ACCESS_COARSE_LOCATION] == true
 
-        if (granted) {
-            gpsMessage = "Location permission मिल गई"
-        } else {
-            gpsMessage = "Location permission नहीं मिली"
-        }
+       if (granted) {
+    gpsMessage = "Location permission मिल गई"
+    getGpsLocation()
+} else {
+    gpsMessage = "Location permission नहीं मिली"
+}
     }
     val context = androidx.compose.ui.platform.LocalContext.current
 
@@ -133,6 +134,7 @@ fun getGpsLocation(): Boolean {
             latText = location.latitude.toString()
             lonText = location.longitude.toString()
             city = "GPS Location"
+            onSaveSettings("GPS Location", location.latitude.toString(), location.longitude.toString())
             gpsMessage = "आपकी लोकेशन सफलतापूर्वक मिल गई"
             return true
         } else {
@@ -505,10 +507,38 @@ fun getGpsLocation(): Boolean {
                             madhab,
                             listOf("HANAFI", "SHAFI")
                         ) { madhab = it }
+                        Button(
+    onClick = {
+        val fineGranted = ContextCompat.checkSelfPermission(
+            context,
+            Manifest.permission.ACCESS_FINE_LOCATION
+        ) == PackageManager.PERMISSION_GRANTED
 
+        val coarseGranted = ContextCompat.checkSelfPermission(
+            context,
+            Manifest.permission.ACCESS_COARSE_LOCATION
+        ) == PackageManager.PERMISSION_GRANTED
+
+        if (fineGranted || coarseGranted) {
+            getGpsLocation()
+            onSaveSettings(city, latText, lonText)
+        } else {
+            locationPermissionLauncher.launch(
+                arrayOf(
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                )
+            )
+        }
+    },
+    modifier = Modifier.fillMaxWidth()
+) {
+    Text("📍 ऑटो लोकेशन पहचानें")
+}
+                    
                         Button(
                             onClick = {
-                                onSaveSettings(city, latText, lonText)
+                                      onSaveSettings(city, latText, lonText)
                             },
                             modifier = Modifier.fillMaxWidth()
                         ) {
