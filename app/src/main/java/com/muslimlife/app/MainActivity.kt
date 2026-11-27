@@ -38,6 +38,8 @@ import androidx.compose.ui.text.style.TextAlign
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
@@ -686,6 +688,22 @@ fun createPrayerNotificationChannel(context: Context) {
 
         manager.createNotificationChannel(channel)
     }
+}fun showPrayerNotification(context: Context, prayerName: String) {
+    val notification = NotificationCompat.Builder(
+        context,
+        "prayer_reminders"
+    )
+        .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
+        .setContentTitle("नमाज़ का समय हो गया")
+        .setContentText("$prayerName की नमाज़ का समय हो गया है।")
+        .setPriority(NotificationCompat.PRIORITY_HIGH)
+        .setAutoCancel(true)
+        .build()
+
+    NotificationManagerCompat.from(context).notify(
+        prayerName.hashCode(),
+        notification
+    )
 }
 
 fun calculatePrayerRows(
