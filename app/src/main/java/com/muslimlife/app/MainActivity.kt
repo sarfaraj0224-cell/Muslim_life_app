@@ -419,6 +419,19 @@ Button(
 ) {
     Text("नमाज़ Notification चालू करें")
 }
+Button(
+    onClick = {
+        try {
+            showPrayerNotification(context, "टेस्ट")
+            gpsMessage = "Test Notification भेज दिया गया ✅"
+        } catch (e: SecurityException) {
+            gpsMessage = "पहले Notification अनुमति चालू करें"
+        }
+    },
+    modifier = Modifier.fillMaxWidth()
+) {
+    Text("Test Notification भेजें")
+}
 
                         InfoCard(
                             "इशराक",
