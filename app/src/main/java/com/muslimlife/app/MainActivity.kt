@@ -234,6 +234,14 @@ var madhab by remember { mutableStateOf("HANAFI") }
             "ईशा" to manualIsha
         )
     } else automaticTimes
+    Text(
+    text = if (manual) {
+        "नमाज़ का समय: Manual"
+    } else {
+        "नमाज़ का समय: Automatic"
+    },
+    color = if (manual) Color.Red else Color.Green
+)
 
     val ishraq = if (!manual && validLocation) {
         automaticTimes.find { it.first == "सूर्योदय" }?.second
