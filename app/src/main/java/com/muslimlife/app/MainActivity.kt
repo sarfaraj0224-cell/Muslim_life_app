@@ -400,7 +400,7 @@ var madhab by remember { mutableStateOf("HANAFI") }
                         }
 Button(
     onClick = {
-        if (Build.VERSION.SDK_INT >= 33) {
+        if (android.os.Build.VERSION.SDK_INT >= 33) {
             notificationPermissionLauncher.launch(
                 Manifest.permission.POST_NOTIFICATIONS
             )
