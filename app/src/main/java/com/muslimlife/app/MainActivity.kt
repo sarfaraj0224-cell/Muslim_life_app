@@ -3,6 +3,8 @@ package com.muslimlife.app
 import android.Manifest
 import android.location.Geocoder
 import android.content.Context
+import android.location.LocationListener
+import android.os.Looper
 import android.location.LocationManager
 import android.content.pm.PackageManager
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -141,9 +143,43 @@ onSaveSettings(
 
             gpsMessage = "आपकी लोकेशन सफलतापूर्वक मिल गई"
             return true
-        } else {
-            gpsMessage = "Location नहीं मिली। GPS चालू करके दोबारा कोशिश करें।"
+       } else {
+    gpsMessage = "Live location खोज रहे हैं..."
+
+    val listener = object : LocationListener {
+        override fun onLocationChanged(location: android.location.Location) {
+            latText = location.latitude.toString()
+            lonText = location.longitude.toString()
+
+            val geocoder = Geocoder(context, Locale.getDefault())
+            val address = geocoder.getFromLocation(
+                location.latitude,
+                location.longitude,
+                1
+            )?.firstOrNull()
+
+            city = address?.locality
+                ?: address?.subAdminArea
+                ?: address?.adminArea
+                ?: "GPS Location"
+
+            onSaveSettings(city, latText, lonText)
+            gpsMessage = "Live location सफलतापूर्वक मिली"
+
+            locationManager.removeUpdates(this)
         }
+    }
+
+    try {
+        locationManager.requestSingleUpdate(
+            LocationManager.GPS_PROVIDER,
+            listener,
+            Looper.getMainLooper()
+        )
+    } catch (e: SecurityException) {
+        gpsMessage = "Location Permission जरूरी है"
+    }
+}
     } catch (e: SecurityException) {
         gpsMessage = "Location Permission जरूरी है"
     }
