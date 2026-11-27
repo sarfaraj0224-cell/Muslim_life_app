@@ -110,6 +110,16 @@ fun MuslimLifeApp(
   var gpsMessage by remember { mutableStateOf("") }
 
 val context = androidx.compose.ui.platform.LocalContext.current
+    val notificationPermissionLauncher =
+    rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { granted ->
+        if (granted) {
+            gpsMessage = "Notification अनुमति मिल गई ✅"
+        } else {
+            gpsMessage = "Notification अनुमति नहीं मिली"
+        }
+    }
 
 fun getGpsLocation(): Boolean {
     val locationManager =
@@ -388,6 +398,20 @@ var madhab by remember { mutableStateOf("HANAFI") }
                                 )
                             }
                         }
+Button(
+    onClick = {
+        if (Build.VERSION.SDK_INT >= 33) {
+            notificationPermissionLauncher.launch(
+                Manifest.permission.POST_NOTIFICATIONS
+            )
+        } else {
+            gpsMessage = "Notification अनुमति की जरूरत नहीं"
+        }
+    },
+    modifier = Modifier.fillMaxWidth()
+) {
+    Text("नमाज़ Notification चालू करें")
+}
 
                         InfoCard(
                             "इशराक",
