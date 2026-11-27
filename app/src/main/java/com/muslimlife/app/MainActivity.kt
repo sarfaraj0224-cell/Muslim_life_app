@@ -39,6 +39,9 @@ import androidx.compose.ui.text.style.TextAlign
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
 import kotlin.math.atan2
 import kotlin.math.cos
 import kotlin.math.sin
@@ -110,6 +113,9 @@ fun MuslimLifeApp(
   var gpsMessage by remember { mutableStateOf("") }
 
 val context = androidx.compose.ui.platform.LocalContext.current
+    LaunchedEffect(Unit) {
+    createPrayerNotificationChannel(context)
+}
     val notificationPermissionLauncher =
     rememberLauncherForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -663,6 +669,23 @@ if (gpsMessage.isNotEmpty()) {
             }
             }
         }
+    }
+}
+fun createPrayerNotificationChannel(context: Context) {
+    if (android.os.Build.VERSION.SDK_INT >= 26) {
+        val channel = NotificationChannel(
+            "prayer_reminders",
+            "नमाज़ के रिमाइंडर",
+            NotificationManager.IMPORTANCE_HIGH
+        ).apply {
+            description = "नमाज़ के समय की सूचना"
+        }
+
+        val manager = context.getSystemService(
+            Context.NOTIFICATION_SERVICE
+        ) as NotificationManager
+
+        manager.createNotificationChannel(channel)
     }
 }
 
