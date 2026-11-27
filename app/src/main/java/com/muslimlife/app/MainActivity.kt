@@ -103,23 +103,9 @@ fun MuslimLifeApp(
     var city by remember { mutableStateOf(savedCity) }
     var latText by remember { mutableStateOf(savedLat) }
     var lonText by remember { mutableStateOf(savedLon) }
-    var gpsMessage by remember { mutableStateOf("") }
-    val locationPermissionLauncher =
-    rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestMultiplePermissions()
-    ) { permissions ->
-        val granted =
-            permissions[Manifest.permission.ACCESS_FINE_LOCATION] == true ||
-            permissions[Manifest.permission.ACCESS_COARSE_LOCATION] == true
+  var gpsMessage by remember { mutableStateOf("") }
 
-       if (granted) {
-    gpsMessage = "Location permission मिल गई"
-    getGpsLocation()
-} else {
-    gpsMessage = "Location permission नहीं मिली"
-}
-    }
-    val context = androidx.compose.ui.platform.LocalContext.current
+val context = androidx.compose.ui.platform.LocalContext.current
 
 fun getGpsLocation(): Boolean {
     val locationManager =
@@ -134,7 +120,13 @@ fun getGpsLocation(): Boolean {
             latText = location.latitude.toString()
             lonText = location.longitude.toString()
             city = "GPS Location"
-            onSaveSettings("GPS Location", location.latitude.toString(), location.longitude.toString())
+
+            onSaveSettings(
+                "GPS Location",
+                location.latitude.toString(),
+                location.longitude.toString()
+            )
+
             gpsMessage = "आपकी लोकेशन सफलतापूर्वक मिल गई"
             return true
         } else {
@@ -146,9 +138,26 @@ fun getGpsLocation(): Boolean {
 
     return false
 }
-    var method by remember { mutableStateOf("MUSLIM_WORLD_LEAGUE") }
-    var madhab by remember { mutableStateOf("HANAFI") }
 
+val locationPermissionLauncher =
+    rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { permissions ->
+
+        val granted =
+            permissions[Manifest.permission.ACCESS_FINE_LOCATION] == true ||
+            permissions[Manifest.permission.ACCESS_COARSE_LOCATION] == true
+
+        if (granted) {
+            gpsMessage = "Location permission मिल गई"
+            getGpsLocation()
+        } else {
+            gpsMessage = "Location permission नहीं मिली"
+        }
+    }
+
+var method by remember { mutableStateOf("MUSLIM_WORLD_LEAGUE") }
+var madhab by remember { mutableStateOf("HANAFI") }
     var manual by remember { mutableStateOf(savedManual) }
     var manualFajr by remember { mutableStateOf(savedManualTimes.getOrElse(0) { "" }) }
     var manualDhuhr by remember { mutableStateOf(savedManualTimes.getOrElse(1) { "" }) }
