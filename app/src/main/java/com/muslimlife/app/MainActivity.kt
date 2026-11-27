@@ -35,6 +35,7 @@ import com.batoulapps.adhan.data.DateComponents
 import com.batoulapps.adhan.Madhab
 import com.batoulapps.adhan.PrayerTimes
 import java.text.SimpleDateFormat
+import androidx.compose.ui.text.style.TextAlign
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
@@ -588,9 +589,17 @@ var madhab by remember { mutableStateOf("HANAFI") }
             )
         }
     },
-    modifier = Modifier.fillMaxWidth()
+   modifier = Modifier.fillMaxWidth()
 ) {
     Text("📍 ऑटो लोकेशन पहचानें")
+}
+
+if (gpsMessage.isNotEmpty()) {
+    Text(
+        text = gpsMessage,
+        modifier = Modifier.fillMaxWidth(),
+        textAlign = TextAlign.Center
+    )
 }
                     
                         Button(
