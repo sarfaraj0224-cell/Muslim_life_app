@@ -2,7 +2,6 @@
 package com.muslimlife.app
 import android.Manifest
 import android.location.Geocoder
-import android.content.Context
 import android.location.LocationListener
 import android.os.Looper
 import android.location.LocationManager
