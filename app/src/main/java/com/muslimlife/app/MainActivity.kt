@@ -1,6 +1,8 @@
 
 package com.muslimlife.app
 import android.Manifest
+import android.location.Geocoder
+import java.util.Locale
 import android.content.Context
 import android.location.LocationManager
 import android.content.pm.PackageManager
@@ -117,15 +119,26 @@ fun getGpsLocation(): Boolean {
                 ?: locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)
 
         if (location != null) {
-            latText = location.latitude.toString()
-            lonText = location.longitude.toString()
-            city = "GPS Location"
+           latText = location.latitude.toString()
+lonText = location.longitude.toString()
 
-            onSaveSettings(
-                "GPS Location",
-                location.latitude.toString(),
-                location.longitude.toString()
-            )
+val geocoder = Geocoder(context, Locale.getDefault())
+val address = geocoder.getFromLocation(
+    location.latitude,
+    location.longitude,
+    1
+)?.firstOrNull()
+
+city = address?.locality
+    ?: address?.subAdminArea
+    ?: address?.adminArea
+    ?: "GPS Location"
+
+onSaveSettings(
+    city,
+    latText,
+    lonText
+)
 
             gpsMessage = "आपकी लोकेशन सफलतापूर्वक मिल गई"
             return true
