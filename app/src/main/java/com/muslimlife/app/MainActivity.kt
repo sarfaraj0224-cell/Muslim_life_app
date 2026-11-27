@@ -135,6 +135,8 @@ city = address?.locality
     ?: address?.subAdminArea
     ?: address?.adminArea
     ?: "GPS Location"
+manual = false
+onSaveManual(false, listOf(manualFajr, manualDhuhr, manualAsr, manualMaghrib, manualIsha))
 
 onSaveSettings(
     city,
