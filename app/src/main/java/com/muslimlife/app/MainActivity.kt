@@ -239,7 +239,6 @@ var madhab by remember { mutableStateOf("HANAFI") }
 
     val validLocation = lat != null && lon != null &&
         lat in -90.0..90.0 && lon in -180.0..180.0
-    val context = LocalContext.current
 
     val automaticTimes = remember(lat, lon, method, madhab) {
         if (validLocation) calculatePrayerRows(lat!!, lon!!, method, madhab)
@@ -713,8 +712,26 @@ fun createPrayerNotificationChannel(context: Context) {
 
         manager.createNotificationChannel(channel)
     }
-}fun showPrayerNotification(context: Context, prayerName: String) {
-    fun schedulePrayerReminder(
+   
+fun showPrayerNotification(context: Context, prayerName: String) {
+    val notification = NotificationCompat.Builder(
+        context,
+        "prayer_reminders"
+    )
+        .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
+        .setContentTitle("नमाज़ का समय हो गया")
+        .setContentText("$prayerName की नमाज़ का समय हो गया है।")
+        .setPriority(NotificationCompat.PRIORITY_HIGH)
+        .setAutoCancel(true)
+        .build()
+
+    NotificationManagerCompat.from(context).notify(
+        prayerName.hashCode(),
+        notification
+    )
+}
+
+fun schedulePrayerReminder(
     context: Context,
     prayerName: String,
     prayerTime: String
@@ -728,8 +745,10 @@ fun createPrayerNotificationChannel(context: Context) {
         val parsedTime = timeFormat.parse(prayerTime) ?: return
 
         val calendar = Calendar.getInstance().apply {
-            set(Calendar.HOUR_OF_DAY, parsedTime.hours)
-            set(Calendar.MINUTE, parsedTime.minutes)
+            time = parsedTime
+            set(Calendar.YEAR, Calendar.getInstance().get(Calendar.YEAR))
+            set(Calendar.MONTH, Calendar.getInstance().get(Calendar.MONTH))
+            set(Calendar.DAY_OF_MONTH, Calendar.getInstance().get(Calendar.DAY_OF_MONTH))
             set(Calendar.SECOND, 0)
             set(Calendar.MILLISECOND, 0)
         }
@@ -743,6 +762,7 @@ fun createPrayerNotificationChannel(context: Context) {
             PrayerNotificationReceiver::class.java
         ).apply {
             putExtra("prayer_name", prayerName)
+            putExtra("prayer_time", prayerTime)
         }
 
         val pendingIntent = PendingIntent.getBroadcast(
@@ -767,22 +787,7 @@ fun createPrayerNotificationChannel(context: Context) {
         e.printStackTrace()
     }
 }
-    val notification = NotificationCompat.Builder(
-        context,
-        "prayer_reminders"
-    )
-        .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
-        .setContentTitle("नमाज़ का समय हो गया")
-        .setContentText("$prayerName की नमाज़ का समय हो गया है।")
-        .setPriority(NotificationCompat.PRIORITY_HIGH)
-        .setAutoCancel(true)
-        .build()
 
-    NotificationManagerCompat.from(context).notify(
-        prayerName.hashCode(),
-        notification
-    )
-}
 
 fun calculatePrayerRows(
     lat: Double,
