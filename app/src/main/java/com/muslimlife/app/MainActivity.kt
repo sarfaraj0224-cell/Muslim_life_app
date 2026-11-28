@@ -923,28 +923,52 @@ fun TimeField(
     value: String,
     onChange: (String) -> Unit
 ) {
-    OutlinedTextField(
-        value,
-        onChange,
-        label = { Text("$label (hh:mm AM/PM)") },
-        modifier = Modifier.fillMaxWidth(),
-        singleLine = true
-    )
-}
+    val context = androidx.compose.ui.platform.LocalContext.current
 
-@Composable
-fun InfoCard(title: String, body: String) {
-    Card {
-        Column(Modifier.fillMaxWidth().padding(16.dp)) {
-            Text(
-                title,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold
-            )
-            Spacer(Modifier.height(6.dp))
-            Text(body)
+    val format = java.text.SimpleDateFormat(
+        "hh:mm a",
+        java.util.Locale.getDefault()
+    )
+
+    val calendar = java.util.Calendar.getInstance()
+
+    if (value.isNotBlank()) {
+        try {
+            val parsed = format.parse(value)
+            if (parsed != null) {
+                calendar.time = parsed
+            }
+        } catch (_: Exception) {
+        }
+    }
+
+    OutlinedButton(
+        onClick = {
+            android.app.TimePickerDialog(
+                context,
+                { _, hourOfDay, minute ->
+                    val selected = java.util.Calendar.getInstance().apply {
+                        set(java.util.Calendar.HOUR_OF_DAY, hourOfDay)
+                        set(java.util.Calendar.MINUTE, minute)
+                        set(java.util.Calendar.SECOND, 0)
+                    }
+
+                    onChange(format.format(selected.time))
+                },
+                calendar.get(java.util.Calendar.HOUR_OF_DAY),
+                calendar.get(java.util.Calendar.MINUTE),
+                false
+            ).show()
+        },
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(label)
+            Text(value.ifBlank { "समय चुनें" })
         }
     }
 }
-
-
