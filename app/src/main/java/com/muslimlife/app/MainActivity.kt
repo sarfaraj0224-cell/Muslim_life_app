@@ -254,6 +254,19 @@ var madhab by remember { mutableStateOf("HANAFI") }
             "ईशा" to manualIsha
         )
     } else automaticTimes
+    LaunchedEffect(prayerRows, manual) {
+    if (prayerRows.isNotEmpty()) {
+        prayerRows
+            .filter { it.first in listOf("फ़ज्र", "ज़ुहर", "अस्र", "मग़रिब", "ईशा") }
+            .forEach { prayer ->
+                PrayerReminderScheduler.schedule(
+                    context = context,
+                    prayerName = prayer.first,
+                    prayerTime = prayer.second
+                )
+            }
+    }
+}
     Text(
     text = if (manual) {
         "नमाज़ का समय: Manual"
