@@ -15,7 +15,7 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Intent
 import java.util.Calendar
-import java.text.SimpleDateFormat
+import java.util.Date
 import java.util.Locale
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
