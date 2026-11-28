@@ -239,6 +239,7 @@ var madhab by remember { mutableStateOf("HANAFI") }
 
     val validLocation = lat != null && lon != null &&
         lat in -90.0..90.0 && lon in -180.0..180.0
+    val context = LocalContext.current
 
     val automaticTimes = remember(lat, lon, method, madhab) {
         if (validLocation) calculatePrayerRows(lat!!, lon!!, method, madhab)
@@ -246,6 +247,7 @@ var madhab by remember { mutableStateOf("HANAFI") }
     }
 
     val prayerRows = if (manual) {
+     
         listOf(
             "फ़ज्र" to manualFajr,
             "ज़ुहर" to manualDhuhr,
@@ -254,6 +256,13 @@ var madhab by remember { mutableStateOf("HANAFI") }
             "ईशा" to manualIsha
         )
     } else automaticTimes
+    LaunchedEffect(prayerRows) {
+    prayerRows
+        .filter { it.first != "सूर्योदय" }
+        .forEach { (name, time) ->
+            schedulePrayerReminder(context, name, time)
+        }
+}
     Text(
     text = if (manual) {
         "नमाज़ का समय: Manual"
