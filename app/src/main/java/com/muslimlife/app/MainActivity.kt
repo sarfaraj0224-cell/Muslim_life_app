@@ -41,9 +41,6 @@ import com.batoulapps.adhan.Madhab
 import com.batoulapps.adhan.PrayerTimes
 import java.text.SimpleDateFormat
 import androidx.compose.ui.text.style.TextAlign
-import java.util.Calendar
-import java.util.Date
-import java.util.Locale
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import android.app.NotificationChannel
